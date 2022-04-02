@@ -94,11 +94,9 @@
     <None Include="scene.sdf">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="shaders\diffuse.vs">
-      <Filter>shaders</Filter>
-    </None>
-    <None Include="shaders\diffuse.fs">
-      <Filter>shaders</Filter>
-    </None>
+    <None Include="shaders\diffuse.vs" />
+    <None Include="shaders\multi.vs" />
+    <None Include="shaders\diffuse.frag" />
+    <None Include="shaders\multi.frag" />
   </ItemGroup>
 </Project>
