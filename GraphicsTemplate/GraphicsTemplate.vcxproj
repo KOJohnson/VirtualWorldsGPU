@@ -171,6 +171,8 @@
     <None Include="shaders\diffuse.vs" />
     <None Include="shaders\multi.frag" />
     <None Include="shaders\multi.vs" />
+    <None Include="shaders\tesselation.frag" />
+    <None Include="shaders\tesselation.vs" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

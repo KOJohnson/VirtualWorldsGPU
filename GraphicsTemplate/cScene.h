@@ -1,5 +1,4 @@
 #pragma once
-
 #include "core.h"
 
 class cMesh;
@@ -19,6 +18,9 @@ public:
 		m_Mesh		= NULL;
 		m_Skybox	= NULL;
 	}
+
+	int width = 200;
+	int height = 200;
 
 	~cScene() 
 	{

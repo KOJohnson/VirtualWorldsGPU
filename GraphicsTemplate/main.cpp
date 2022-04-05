@@ -108,6 +108,7 @@ void keyboard(GLFWwindow* window, int key, int scancode, int action, int mods)
 /////////////////////////////////////////////////////////////////////////////////////
 void renderScene()
 {
+	glEnable(GL_MULTISAMPLE);
 	glEnable(GL_DEPTH_TEST);
 	glDepthFunc(GL_LEQUAL);
 	glDepthMask(true);
@@ -162,6 +163,7 @@ int main()
 	glfwInit();
 
 	glfwWindowHint(GLFW_OPENGL_DEBUG_CONTEXT, true);
+	glfwWindowHint(GLFW_SAMPLES, 4);
 
 	GLFWwindow* window = glfwCreateWindow(initWidth, initHeight, "GraphicsTemplate", NULL, NULL);
 	if (window == NULL)

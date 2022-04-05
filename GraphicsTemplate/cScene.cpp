@@ -49,12 +49,35 @@ void cScene::init()
 void cScene::render()
 {
 	update();
+
+	/////////////////////
+	//First Pass
+	/////////////////////
 	
 	for (int i = 0; i < m_mesh_count; i++)
 	{
 		m_Mesh[i].render(this, &m_ShaderInfo);
 	}
-}
+
+	/////////////////////
+	//Second Pass
+	/////////////////////
+
+	glReadBuffer(GL_BACK);
+	glBindTexture(GL_TEXTURE_2D, m_Mesh->m_tex[0]);
+	glCopyTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 0, 0, width, height, 0);
+
+	glBindTexture(GL_TEXTURE_2D, m_Mesh->m_tex[0]);
+	glDrawBuffer(GL_BACK);
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+
+	glActiveTexture(GL_TEXTURE0 + m_Mesh->m_tex[0]);
+	
+
+
+}	
 
 /////////////////////////////////////////////////////////////////////////////////////
 // openSDF() - Opens up a scene descriptor file
