@@ -23,6 +23,7 @@ cScene Scene;
 unsigned int initWidth = 800;
 unsigned int initHeight = 600;
 
+
 /////////////////////////////////////////////////////////////////////////////////////
 //
 /////////////////////////////////////////////////////////////////////////////////////
@@ -108,8 +109,14 @@ void keyboard(GLFWwindow* window, int key, int scancode, int action, int mods)
 /////////////////////////////////////////////////////////////////////////////////////
 void renderScene()
 {
+	//fullscreen MSAA
 	glEnable(GL_MULTISAMPLE);
 	glEnable(GL_DEPTH_TEST);
+
+	//Needed to blend textures 
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 	glDepthFunc(GL_LEQUAL);
 	glDepthMask(true);
 

@@ -6,6 +6,9 @@ layout(binding = 1) uniform sampler2D ColTexture2;
 in float Intensity;
 in vec2 TexCoord;
 
+float intensity1 = 0.2;
+float intensity2 = 1;
+
 out vec4 FragColor; // Color that will be used for the fragment
 out vec4 FragColor2;
 
@@ -17,6 +20,7 @@ void main()
     vec4 colour = texture(ColTexture, TexCoord.xy); 
     vec4 colour2 = texture(ColTexture2, TexCoord.xy);
 
-    FragColor = vec4(vec3(colour.xyz * Intensity), 0.0);
-    FragColor2 = vec4(vec3(colour2.xyz * Intensity), 0.0);
+	FragColor = colour * intensity1 + colour2 * intensity2;
+    //FragColor = vec4(vec3(colour.xyz * Intensity), 0.0);
+    //FragColor2 = vec4(vec3(colour2.xyz * Intensity), 0.0);
 }
