@@ -94,11 +94,38 @@
     <None Include="scene.sdf">
       <Filter>Resource Files</Filter>
     </None>
-    <None Include="shaders\diffuse.vs" />
-    <None Include="shaders\multi.vs" />
-    <None Include="shaders\diffuse.frag" />
-    <None Include="shaders\multi.frag" />
-    <None Include="shaders\tesselation.vs" />
-    <None Include="shaders\tesselation.frag" />
+    <None Include="shaders\diffuse.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\diffuse.vs">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\environmental.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\environmental.vs">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\multi.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\multi.vs">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\tesselation.frag">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\tesselation.vs">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\diffuse.geom">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\tesselation.tesc">
+      <Filter>shaders</Filter>
+    </None>
+    <None Include="shaders\tesselation.tese">
+      <Filter>shaders</Filter>
+    </None>
   </ItemGroup>
 </Project>

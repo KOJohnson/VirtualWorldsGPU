@@ -9,4 +9,8 @@ public:
 	void init();
 
 	char** m_tex;
+
+	char* wrkPls;
+
+	int faceCount = 6;
 };

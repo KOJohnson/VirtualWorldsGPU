@@ -32,6 +32,11 @@ cSkybox::~cSkybox()
 //////////////////////////////////////////////////////////////////////////////////////////
 void cSkybox::init()
 {
+	for (int i = 0; i < 6; i++)
+	{
+		//cTex.loadCubeMapTGA(wrkPls, faceCount);
+	}
+
 	// load in all textures for this environment map here..
 }
 

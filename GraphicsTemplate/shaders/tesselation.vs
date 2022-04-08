@@ -13,7 +13,6 @@ layout (location = 6) uniform vec3          lightPosition;
 out float Intensity;
 out vec2 TexCoord;
 
-out vec4 vertexColour;
 
 //////////////////////////////////////////////////////////////////
 // main()
@@ -30,8 +29,7 @@ void main()
     vec3 lightDir  = lightPosition - mpos;
     vec3 L = normalize(lightDir);
 
-    Intensity = 1f;
+    Intensity = dot(N, L);
 
     gl_Position = gVP * vec4(mpos, 1.0);
-	vertexColour = vec4(0.5, 0.0, 0.0, 1.0);
 }

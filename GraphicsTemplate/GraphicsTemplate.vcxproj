@@ -168,7 +168,12 @@
   <ItemGroup>
     <None Include="scene.sdf" />
     <None Include="shaders\diffuse.frag" />
+    <None Include="shaders\tesselation.tesc" />
+    <None Include="shaders\tesselation.tese" />
     <None Include="shaders\diffuse.vs" />
+    <None Include="shaders\environmental.frag" />
+    <None Include="shaders\environmental.vs" />
+    <None Include="shaders\diffuse.geom" />
     <None Include="shaders\multi.frag" />
     <None Include="shaders\multi.vs" />
     <None Include="shaders\tesselation.frag" />

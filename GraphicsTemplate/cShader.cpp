@@ -116,8 +116,8 @@ void cShader::loadShaderFile( sShaderDetails *pShader, int count )
 		{
 			case GL_VERTEX_SHADER: 			strcpy_s(file_type, sizeof(char) * 8, ".vs");	break;
 			case GL_FRAGMENT_SHADER:		strcpy_s(file_type, sizeof(char) * 8, ".frag");	break;
-			case GL_TESS_CONTROL_SHADER:	strcpy_s(file_type, sizeof(char) * 8, ".cs");	break;
-			case GL_TESS_EVALUATION_SHADER:	strcpy_s(file_type, sizeof(char) * 8, ".es");	break;
+			case GL_TESS_CONTROL_SHADER:	strcpy_s(file_type, sizeof(char) * 8, ".tesc");	break;
+			case GL_TESS_EVALUATION_SHADER:	strcpy_s(file_type, sizeof(char) * 8, ".tese");	break;
 			case GL_GEOMETRY_SHADER:		strcpy_s(file_type, sizeof(char) * 8, ".gs");	break;
 			case GL_COMPUTE_SHADER:			strcpy_s(file_type, sizeof(char) * 8, ".comp");	break;
 		}
